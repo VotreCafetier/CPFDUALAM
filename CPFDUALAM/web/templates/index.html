@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>CPFDUALAM</h1>
+    
+
+
+
+    <script>
+        getText("./api/Product.json");
+        async function getText(file) {
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        console.log(myText);
+        }
+    </script>
+{% endblock content %}

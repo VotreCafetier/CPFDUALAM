@@ -1,0 +1,15 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Commandez notre bras de piscine</h1>
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <div>{{ product.product_name }}</div>
+        <div>{{ product.product_model }}</div>
+        <div>{{ product.product_price }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
